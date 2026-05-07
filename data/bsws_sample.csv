@@ -1,0 +1,13 @@
+year,sex,age_group,education,firm_size,scheduled_cash_earnings,annual_bonus,total_annual_earnings,source,notes
+2020,Female,25-29,University,100-999,DEMO_VALUE,DEMO_VALUE,DEMO_VALUE,Demo placeholder,Not official statistics
+2020,Female,30-34,University,100-999,DEMO_VALUE,DEMO_VALUE,DEMO_VALUE,Demo placeholder,Not official statistics
+2020,Male,25-29,University,100-999,DEMO_VALUE,DEMO_VALUE,DEMO_VALUE,Demo placeholder,Not official statistics
+2020,Male,30-34,University,100-999,DEMO_VALUE,DEMO_VALUE,DEMO_VALUE,Demo placeholder,Not official statistics
+2021,Female,25-29,University,100-999,DEMO_VALUE,DEMO_VALUE,DEMO_VALUE,Demo placeholder,Not official statistics
+2021,Female,30-34,University,100-999,DEMO_VALUE,DEMO_VALUE,DEMO_VALUE,Demo placeholder,Not official statistics
+2021,Male,25-29,University,100-999,DEMO_VALUE,DEMO_VALUE,DEMO_VALUE,Demo placeholder,Not official statistics
+2021,Male,30-34,University,100-999,DEMO_VALUE,DEMO_VALUE,DEMO_VALUE,Demo placeholder,Not official statistics
+2022,Female,25-29,University,100-999,DEMO_VALUE,DEMO_VALUE,DEMO_VALUE,Demo placeholder,Not official statistics
+2022,Female,30-34,University,100-999,DEMO_VALUE,DEMO_VALUE,DEMO_VALUE,Demo placeholder,Not official statistics
+2022,Male,25-29,University,100-999,DEMO_VALUE,DEMO_VALUE,DEMO_VALUE,Demo placeholder,Not official statistics
+2022,Male,30-34,University,100-999,DEMO_VALUE,DEMO_VALUE,DEMO_VALUE,Demo placeholder,Not official statistics

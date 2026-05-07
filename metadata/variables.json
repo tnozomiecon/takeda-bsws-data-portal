@@ -1,0 +1,19 @@
+{
+  "project": "Takeda BSWS Data Portal",
+  "status": "MVP prototype",
+  "data_note": "The included CSV is a placeholder for UI testing only. Replace with processed public BSWS tables before public data release.",
+  "variables": {
+    "year": "Survey year",
+    "sex": "Sex category",
+    "age_group": "Age group",
+    "education": "Education category",
+    "firm_size": "Firm size category",
+    "scheduled_cash_earnings": "Scheduled cash earnings; placeholder in demo file",
+    "annual_bonus": "Annual bonus and special payments; placeholder in demo file",
+    "total_annual_earnings": "Constructed annual earnings measure; placeholder in demo file",
+    "source": "Source table or source label",
+    "notes": "Processing notes"
+  },
+  "suggested_source_note": "Source: Ministry of Health, Labour and Welfare, Basic Survey on Wage Structure; processed by Takeda BSWS Data Portal.",
+  "disclaimer": "Unofficial research project. Not operated, endorsed, or certified by the Government of Japan or MHLW."
+}

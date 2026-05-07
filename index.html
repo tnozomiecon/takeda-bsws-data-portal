@@ -1,10 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Takeda BSWS Data Portal</title>
+  <meta name="description" content="An unofficial research interface for accessing harmonized public tables from Japan's Basic Survey on Wage Structure." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <h1>Takeda BSWS Data Portal</h1>
-  <p>Under construction.</p>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Takeda BSWS Data Portal home">
+      <span class="brand-mark">T</span>
+      <span>
+        <strong>Takeda BSWS Data Portal</strong>
+        <small>Unofficial research interface</small>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#browser">Data browser</a>
+      <a href="#method">Method</a>
+      <a href="#citation">Citation</a>
+      <a class="nav-button" href="data/bsws_sample.csv">Download sample</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Japan labor statistics, cleaned for research use</p>
+        <h1>A cleaner way to access BSWS tables.</h1>
+        <p class="lead">
+          A lightweight public portal for browsing, filtering, and downloading harmonized
+          tables from the Basic Survey on Wage Structure.
+        </p>
+
+        <div class="hero-actions">
+          <a class="primary-button" href="#browser">Open data browser</a>
+          <a class="secondary-button" href="#method">Read methodology</a>
+        </div>
+
+        <p class="notice">
+          Demo status: the current table uses placeholder demo rows only. Replace
+          <code>data/bsws_sample.csv</code> with processed public statistics before release.
+        </p>
+      </div>
+
+      <aside class="hero-card" aria-label="Project status">
+        <div class="status-row">
+          <span>Dataset</span>
+          <strong>BSWS</strong>
+        </div>
+        <div class="status-row">
+          <span>Format</span>
+          <strong>CSV / metadata</strong>
+        </div>
+        <div class="status-row">
+          <span>Access</span>
+          <strong>Static GitHub Pages</strong>
+        </div>
+        <div class="status-row">
+          <span>Status</span>
+          <strong>MVP prototype</strong>
+        </div>
+      </aside>
+    </section>
+
+    <section class="metrics" aria-label="Project highlights">
+      <article>
+        <span class="metric-value" id="metricRows">—</span>
+        <span class="metric-label">rows loaded</span>
+      </article>
+      <article>
+        <span class="metric-value" id="metricYears">—</span>
+        <span class="metric-label">years in file</span>
+      </article>
+      <article>
+        <span class="metric-value" id="metricVars">—</span>
+        <span class="metric-label">variables</span>
+      </article>
+    </section>
+
+    <section class="panel" id="browser">
+      <div class="section-heading">
+        <p class="eyebrow">Interactive preview</p>
+        <h2>Data browser</h2>
+        <p>
+          Select dimensions below. The table is filtered in the browser, so no server or database
+          is needed for the first version.
+        </p>
+      </div>
+
+      <div class="browser-grid">
+        <form class="filters" id="filters" aria-label="Data filters">
+          <label>
+            Year
+            <select id="yearFilter">
+              <option value="">All years</option>
+            </select>
+          </label>
+
+          <label>
+            Sex
+            <select id="sexFilter">
+              <option value="">All sexes</option>
+            </select>
+          </label>
+
+          <label>
+            Age group
+            <select id="ageFilter">
+              <option value="">All age groups</option>
+            </select>
+          </label>
+
+          <label>
+            Education
+            <select id="educationFilter">
+              <option value="">All education levels</option>
+            </select>
+          </label>
+
+          <div class="filter-actions">
+            <button type="button" id="resetButton">Reset</button>
+            <button type="button" id="downloadButton">Download filtered CSV</button>
+          </div>
+        </form>
+
+        <div class="table-card">
+          <div class="table-toolbar">
+            <span id="resultCount">Loading data…</span>
+            <span class="pill">Preview: first 50 rows</span>
+          </div>
+
+          <div class="table-wrap">
+            <table id="dataTable">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="split-section" id="method">
+      <div>
+        <p class="eyebrow">Research pipeline</p>
+        <h2>Designed for reproducibility.</h2>
+        <p>
+          The project should separate public source data, cleaning scripts, processed files,
+          and metadata. The website is only the final presentation layer.
+        </p>
+      </div>
+
+      <div class="method-cards">
+        <article>
+          <span class="step">01</span>
+          <h3>Retrieve</h3>
+          <p>Download public BSWS tables from official sources and keep source IDs and URLs.</p>
+        </article>
+        <article>
+          <span class="step">02</span>
+          <h3>Harmonize</h3>
+          <p>Standardize years, labels, codes, and variable names across survey waves.</p>
+        </article>
+        <article>
+          <span class="step">03</span>
+          <h3>Publish</h3>
+          <p>Expose tidy CSV files, metadata, and a transparent citation note.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel citation-panel" id="citation">
+      <div class="section-heading">
+        <p class="eyebrow">Attribution</p>
+        <h2>Citation and disclaimer</h2>
+      </div>
+
+      <div class="citation-box">
+        <p>
+          Suggested citation:
+          <strong>Source: Ministry of Health, Labour and Welfare, Basic Survey on Wage Structure;
+          processed by Takeda BSWS Data Portal.</strong>
+        </p>
+        <p>
+          This is an unofficial research project. It is not operated, endorsed, or certified by
+          the Government of Japan or the Ministry of Health, Labour and Welfare.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Takeda BSWS Data Portal</span>
+    <span>Built as a static GitHub Pages research data interface.</span>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
